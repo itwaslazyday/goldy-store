@@ -1,0 +1,10 @@
+html,
+body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: var(--font-family);
+  min-width: var(--mobile-width);
+  color: var(--color-text-main);
+}

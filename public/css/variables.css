@@ -1,0 +1,22 @@
+:root {
+  --mobile-width: 320px;
+  --mobile-width-only: 767px;
+  --tablet-width: 768px;
+  --desktop-width: 1300px;
+
+  --font-family: 'Inter', Arial, sans-serif;
+
+  --color-white: #ffffff;
+  --color-text-main: #303030;
+  --color-bg-grey: #F8F8F8;
+  --color-grey: #F0F0F0;
+  --color-grey-hover: #DDDDDD;
+  --color-input-placeholder: #A2A2A2;
+  --color-red: #E46942;
+
+  --color-bg-sale: #5B8A8F;
+  --color-bg-new: #495159;
+  --color-bg-hit: #E1A661;
+
+  --color-control-hover: #979797;
+}
