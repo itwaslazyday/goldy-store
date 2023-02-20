@@ -88,7 +88,7 @@
 }
 
 .sale__item-list {
-  margin: 0;
+  margin: 0 0 120px;
   padding: 0;
 }
 
@@ -96,4 +96,11 @@
   font-size: 16px;
   margin: 0;
   text-align: center;
+}
+
+.sale__discounts-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
 }

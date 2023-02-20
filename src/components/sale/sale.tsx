@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import 'swiper/css';
-import { categories, items } from '../../const';
+import { categories, discounts, items } from '../../const';
 import ItemCard from '../item-card/item-card';
 import './sale.css';
+import DiscountItem from '../discount-item/discount-item';
 
 function Sale (): JSX.Element {
   const [saleState, setSaleState] = useState<number>(1);
@@ -31,12 +31,12 @@ function Sale (): JSX.Element {
                 ))
               }
             </ul>
-            <button className='sale__btn-prev'>
+            <button className='sale__btn-prev' aria-label='Предыдущие товары'>
               <svg width='17' height='8'>
                 <use xlinkHref='img/sprite.svg#slide-prev'/>
               </svg>
             </button>
-            <button className='sale__btn-next'>
+            <button className='sale__btn-next' aria-label='Следующие товары'>
               <svg width='17' height='8'>
                 <use xlinkHref='img/sprite.svg#slide-next'/>
               </svg>
@@ -53,18 +53,9 @@ function Sale (): JSX.Element {
                 disabledClass: 'sale__btn-disabled'
               }
             }
-            // pagination={
-            //   {
-            //     'el': '.feedbacks__pagination-wrapper',
-            //     'clickable': true,
-            //     'bulletClass': 'custom-bullet dot swiper-pagination-bullet',
-            //     'bulletActiveClass': 'custom-bullet-active swiper-pagination-bullet-active'
-            //   }
-            // }
             slidesPerView={4}
             speed={500}
             spaceBetween={20}
-            grabCursor
             mousewheel
           >
             {items.filter((item) => item.categoryId === saleState).length ?
@@ -78,7 +69,6 @@ function Sale (): JSX.Element {
                         className='sale__item'
                         key={item.id}
                         id={`${item.id}`}
-                        // onClick={(evt) => setSaleState(+evt.currentTarget.id ?? 1)}
                       >
                         <ItemCard item={item} category={saleState}/>
                       </SwiperSlide>
@@ -89,6 +79,18 @@ function Sale (): JSX.Element {
                 К сожалению, товары из выбранной категории пока не участвуют в распродаже.
               </p>}
           </Swiper>
+          <ul className='sale__discounts-list list-reset'>
+            {
+              discounts.map((discount) => (
+                <li
+                  className='sale__discounts-item'
+                  key={discount.id}
+                >
+                  <DiscountItem discount={discount}/>
+                </li>
+              ))
+            }
+          </ul>
         </div>
       </div>
     </section>

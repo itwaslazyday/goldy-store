@@ -1,4 +1,4 @@
-import { Item } from './types/types';
+import { Article, Discount, Item } from './types/types';
 
 const cities: string[] = ['Санкт-Петербург', 'Москва', 'Нижний Новгород', 'Ростов-на-Дону'];
 
@@ -58,31 +58,9 @@ const categories = [
 
 const items: Item[] = [
   {
-    categoryId: 2,
-    id: 220,
-    isFavorite: false,
-    isCompared: false,
-    isSale: true,
-    isNew: false,
-    isHit: true,
-    oldPrice: 53000,
-    newPrice: 39000,
-    description: 'Вечерние серьги с яркими аметистами',
-  },
-  {
-    categoryId: 4,
-    id: 420,
-    isFavorite: false,
-    isCompared: false,
-    isSale: false,
-    isNew: false,
-    isHit: false,
-    newPrice: 70000,
-    description: 'Плетеный золотой браслет с топазами',
-  },
-  {
     categoryId: 1,
     id: 120,
+    images: ['120-1', '120-2', '120-3'],
     isFavorite: false,
     isCompared: false,
     isSale: true,
@@ -91,10 +69,13 @@ const items: Item[] = [
     oldPrice: 65000,
     newPrice: 41000,
     description: 'Стильное кольцо из белого золота c бриллиантами',
+    materials: ['Белое золото', 'Желтое золото', 'Серебро'],
+    sizes: [16, 17, 18]
   },
   {
     categoryId: 1,
     id: 121,
+    images: ['121-1', '121-2', '121-3'],
     isFavorite: true,
     isCompared: true,
     isSale: false,
@@ -102,10 +83,13 @@ const items: Item[] = [
     isHit: true,
     newPrice: 56000,
     description: 'Стильное кольцо из белого золота c бриллиантами',
+    materials: ['Белое золото', 'Желтое золото', 'Серебро'],
+    sizes: [16, 17, 18]
   },
   {
     categoryId: 1,
     id: 122,
+    images: ['122-1', '122-2', '122-3'],
     isFavorite: false,
     isCompared: false,
     isSale: false,
@@ -113,10 +97,13 @@ const items: Item[] = [
     isHit: false,
     newPrice: 37500,
     description: 'Стильное кольцо из белого золота c бриллиантами',
+    materials: ['Белое золото', 'Желтое золото', 'Серебро'],
+    sizes: [16, 17, 18]
   },
   {
     categoryId: 1,
     id: 123,
+    images: ['123-1', '123-2', '123-3'],
     isFavorite: false,
     isCompared: true,
     isSale: false,
@@ -124,18 +111,92 @@ const items: Item[] = [
     isHit: false,
     newPrice: 39200,
     description: 'Стильное кольцо из белого золота c бриллиантами',
+    materials: ['Белое золото', 'Желтое золото', 'Серебро'],
+    sizes: [16, 17, 18]
   },
   {
     categoryId: 1,
     id: 124,
-    isFavorite: false,
-    isCompared: true,
-    isSale: false,
-    isNew: true,
-    isHit: false,
-    newPrice: 39200,
+    images: ['124-1', '124-2', '124-3'],
+    isFavorite: true,
+    isCompared: false,
+    isSale: true,
+    isNew: false,
+    isHit: true,
+    newPrice: 22500,
+    oldPrice: 38000,
     description: 'Стильное кольцо из белого золота c бриллиантами',
+    materials: ['Белое золото', 'Желтое золото', 'Серебро'],
+    sizes: [16, 17, 18]
+  },
+  {
+    categoryId: 2,
+    id: 220,
+    images: ['220-1', '220-2', '220-3'],
+    isFavorite: false,
+    isCompared: false,
+    isSale: true,
+    isNew: false,
+    isHit: true,
+    oldPrice: 53000,
+    newPrice: 39000,
+    description: 'Вечерние серьги с яркими аметистами',
+    materials: ['Белое золото', 'Желтое золото', 'Серебро']
+  },
+  {
+    categoryId: 4,
+    id: 420,
+    images: ['420-1', '420-2', '420-3'],
+    isFavorite: false,
+    isCompared: false,
+    isSale: false,
+    isNew: false,
+    isHit: false,
+    newPrice: 70000,
+    description: 'Плетеный золотой браслет с топазами',
+    materials: ['Белое золото', 'Желтое золото', 'Серебро']
   },
 ];
 
-export {cities, controls, menu, categories, items};
+const articles: Article[] = [
+  {
+    id: 1,
+    title: 'Обручальные кольца: тренды 2021',
+    date: '21 сентября 2021'
+  },
+  {
+    id: 2,
+    title: 'Главные ювелирные тренды года',
+    date: '25 сентября 2021'
+  },
+  {
+    id: 3,
+    title: 'Жемчуг: 7 малоизвестных фактов о культовом украшении',
+    date: '21 сентября 2021'
+  },
+  {
+    id: 4,
+    title: 'Как отличить золото от подделки: 10 практических советов',
+    date: '21 сентября 2021'
+  },
+];
+
+const discounts: Discount[] = [
+  {
+    id: 1,
+    title: 'Скидки на все украшения с бриллиантами',
+    value: 50
+  },
+  {
+    id: 2,
+    title: 'Скидки на кольца и браслеты',
+    value: 40
+  },
+  {
+    id: 3,
+    title: 'снижение цен на обручальные кольца',
+    value: 60
+  },
+];
+
+export {cities, controls, menu, categories, items, articles, discounts};

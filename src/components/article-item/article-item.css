@@ -1,0 +1,14 @@
+.article__image {
+  object-fit: cover;
+  margin-bottom: 20px;
+  max-width: max-content;
+}
+
+.article__date {
+  margin-bottom: 12px;
+}
+
+.article__heading {
+  font-weight: 500;
+  font-size: 16px;
+}

@@ -1,0 +1,41 @@
+.articles__inner {
+  padding: 60px 0;
+}
+
+.articles__all-link {
+  display: block;
+  margin-left: auto;
+  max-width: max-content;
+  font-weight: 500;
+  margin-bottom: 40px;
+  padding-right: 40px;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.articles__all-link::after {
+  content: '';
+  position: absolute;
+  width: 27px;
+  height: 100%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('../../../public/img/icons/article-arrow.svg') no-repeat center;
+}
+
+.articles__all-link:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.5;
+}
+
+.articles__all-link:focus-visible {
+  outline-offset: 10px;
+}
+
+.articles__list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 20px;
+}

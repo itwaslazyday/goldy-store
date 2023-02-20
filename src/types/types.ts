@@ -1,14 +1,29 @@
 type Item = {
   categoryId: number;
-  id: number,
-  isFavorite: boolean,
-  isCompared: boolean,
+  id: number;
+  images: string[];
+  isFavorite: boolean;
+  isCompared: boolean;
   isSale: boolean;
   isHit: boolean;
   isNew: boolean;
   oldPrice?: number;
   newPrice: number;
   description: string;
+  materials: string[];
+  sizes?: number[];
 };
 
-export type {Item};
+type Article = {
+  id: number;
+  title: string;
+  date: string;
+};
+
+type Discount = {
+  title: string;
+  value: number;
+  id: number;
+};
+
+export type {Item, Article, Discount};
