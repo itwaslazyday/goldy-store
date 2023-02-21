@@ -30,10 +30,11 @@ function SiteHeader (): JSX.Element {
               <ul className='nav__controls-list list-reset'>
                 {controls.map((item) => (
                   <li className='nav__controls-item' key={item.id}>
-                    <button className='nav__control' type='button' aria-label={item.label}>
-                      <svg width='20' height='20'>
+                    <button className={`nav__control nav__control--${item.id }`} type='button' aria-label={item.label}>
+                      <svg width='20' height='20' stroke={item.id === 'chart' ? '#303030' : ''}>
                         <use xlinkHref={`img/sprite.svg#${item.id}`}/>
                       </svg>
+                      {item.id === 'favorite' ? <span className='nav__favourite-qty'>23</span> : ''}
                     </button>
                   </li>)
                 )}

@@ -37,24 +37,6 @@
   margin: 0;
 }
 
-/* .field-basic,
-.button-basic {
-  font-family: 'Nekst-Black';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 20px;
-}
-
-.field-basic {
-  max-height: 60px;
-  padding: 20px;
-  background-color: var(--color-grey);
-  border: none;
-  border-radius: 16px;
-  color: var(--color-graphit);
-} */
-
 .button-basic {
   border: none;
   background-color: var(--color-text-main);

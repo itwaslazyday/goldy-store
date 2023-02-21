@@ -1,17 +1,20 @@
 type Item = {
   categoryId: number;
   id: number;
+  vendorCode: number;
+  rating: number;
   images: string[];
   isFavorite: boolean;
   isCompared: boolean;
-  isSale: boolean;
-  isHit: boolean;
-  isNew: boolean;
+  isSale?: boolean;
+  isHit?: boolean;
+  isNew?: boolean;
   oldPrice?: number;
   newPrice: number;
   description: string;
   materials: string[];
   sizes?: number[];
+  isDayItem?: boolean;
 };
 
 type Article = {

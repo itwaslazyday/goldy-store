@@ -39,8 +39,8 @@ function Sale (): JSX.Element {
             modules={[Navigation]}
             navigation={
               {
-                nextEl: '.sl__btn-next',
-                prevEl: '.sl__btn-prev',
+                nextEl: '.sale__btn-next',
+                prevEl: '.sale__btn-prev',
                 disabledClass: 'sl__btn-disabled'
               }
             }

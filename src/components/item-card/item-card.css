@@ -41,8 +41,8 @@
 
 .card__controls {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 14px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   row-gap: 10px;

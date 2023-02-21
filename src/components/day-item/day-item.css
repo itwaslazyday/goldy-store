@@ -1,0 +1,373 @@
+.dayitem {
+  display: flex;
+  justify-content: center;
+}
+
+.dayitem__left,
+.dayitem__right {
+  width: 50%;
+  position: relative;
+}
+
+.dayitem__sl-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  min-width: 84%;
+  z-index: 2;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dayitem__btn-next,
+.dayitem__btn-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.dayitem__btn-next:active svg {
+  fill: var(--color-bg-grey);
+}
+
+.dayitem__btn-prev svg {
+  transform: rotate(180deg);
+}
+
+.dayitem__btn-disabled {
+  opacity: 0.2;
+}
+
+.dayitem__tip-list {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 4px;
+  min-height: 22px;
+  z-index: 2;
+}
+
+.dayitem__tip {
+  padding: 4px 12px;
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--color-bg-sale);
+  border-radius: 15px;
+}
+
+.dayitem__tip--hit {
+  background-color: var(--color-bg-hit);
+}
+
+.dayitem__tip--new {
+  background-color: var(--color-bg-new);
+}
+
+.dayitem__tip-hidden {
+  display: none;
+}
+
+.dayitem__rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.dayitem__rating-stars {
+  position: relative;
+  height: 17px;
+  width: 109px;
+  margin-right: 10px;
+}
+
+.dayitem__rating-stars::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: url(../../../public/img/icons/rating-stars.svg) no-repeat;
+  z-index: 1;
+}
+
+.dayitem__rating-stars > span {
+  position: absolute;
+  display: block;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.dayitem__rating-stars > span::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: url(../../../public/img/icons/rating-stars-filled.svg) no-repeat;
+  z-index: 1;
+}
+
+.dayitem__heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.dayitem__vendor-code {
+  display: inline-block;
+  color: #8F8F8F;
+  margin-bottom: 32px;
+}
+
+.dayitem__prices-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 28px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--color-grey);
+  margin-bottom: 32px;
+}
+
+.dayitem__prices {
+  vertical-align: bottom;
+  margin: 0;
+}
+
+.dayitem__new-price {
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 16px;
+}
+
+.dayitem__old-price {
+  font-size: 16px;
+  text-decoration-line: line-through;
+  color: #8F8F8F;
+}
+
+.dayitem__old-price--hidden,
+.dayitem__diff--hidden {
+  display: none;
+}
+
+.dayitem__price-diff {
+  padding: 4px 8px;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-white);
+  background-color: #E24B33;
+  border-radius: 15px;
+}
+
+.dayitem__color-wrapper {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  margin-bottom: 32px;
+}
+
+.dayitem__colors {
+  padding-left: 4px;
+  margin: 19px 0 0;
+}
+
+.dayitem__color {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dayitem__color:last-child {
+  opacity: 0.3;
+}
+
+.dayitem__color::after{
+  position: absolute;
+  content: '';
+  height: 32px;
+  width: 32px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #DADADA;
+  border-radius: inherit;
+}
+
+.dayitem__color-wrapper span,
+.dayitem__info span {
+  text-transform: uppercase;
+}
+
+.dayitem__info {
+  margin: 0;
+}
+
+.dayitem__info span:first-child {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.dayitem__help {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-grey);
+  margin-left: 8px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.dayitem__help:hover {
+  background-color: #D3D3D3;
+}
+
+.dayitem__sizes {
+  margin: 15px 0 40px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.dayitem__size {
+  width: 50px;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: 28px;
+  border: 1px solid #DADADA;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.dayitem__size:hover {
+  border-color: var(--color-text-main);
+}
+
+.dayitem__size:active {
+  color: var(--color-white);
+  background-color: #000000;
+}
+
+.dayitem__size:last-child {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.dayitem__buttons {
+  display: flex;
+  gap: 34px;
+  justify-content: flex-start;
+}
+
+.dayitem__cart {
+  width: 61.5%;
+}
+
+.dayitem__add-to-cart,
+.dayitem__click-buy {
+  display: block;
+  min-width: 100%;
+  text-transform: uppercase;
+}
+
+.dayitem__add-to-cart {
+  margin-bottom: 10px;
+}
+
+.dayitem__add-to-cart:hover {
+  background-color: #505050;
+}
+
+.dayitem__add-to-cart:active {
+  background-color: #000000;
+}
+
+.dayitem__click-buy:hover {
+  background-color: var(--color-text-main);
+  color: var(--color-white)
+}
+
+.dayitem__click-buy:active {
+  background-color: #000000;
+  color: var(--color-white)
+}
+
+.dayitem__click-buy {
+  background-color: transparent;
+  border: 1px solid var(--color-text-main);
+  color: var(--color-text-main);
+}
+
+.dayitem__control {
+  display: block;
+  background-color: transparent;
+  border: none;
+  font-weight: 300;
+  font-size: inherit;
+  line-height: 100%;
+  cursor: pointer;
+  color: var(--color-text-main);
+}
+
+.dayitem__control:focus-visible {
+  outline-offset: 5px;
+}
+
+.dayitem__control:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.dayitem__control span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dayitem__control svg {
+  transition: all linear 0.2s;
+}
+
+.dayitem__control--share:not(.active):hover svg,
+.dayitem__control--favorite:not(.active):hover svg {
+  fill: var(--color-control-hover);
+}
+
+.dayitem__control--compare:not(.active):hover svg {
+  stroke: var(--color-control-hover);
+}
+
+.dayitem__control--favorite:active svg {
+  fill: #E24B33;
+}
+
+.dayitem__control--compare:active svg {
+  fill: var(--color-control-hover);
+}
+
+

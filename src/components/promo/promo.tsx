@@ -21,8 +21,8 @@ function Promo (): JSX.Element {
             modules={[Navigation, Pagination]}
             navigation={
               {
-                nextEl: '.sl__btn-next',
-                prevEl: '.sl__btn-prev',
+                nextEl: '.promo__btn-next',
+                prevEl: '.promo__btn-prev',
                 disabledClass: 'sl__btn-disabled'
               }
             }

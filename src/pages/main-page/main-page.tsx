@@ -1,4 +1,5 @@
 import Articles from '../../components/articles/articles';
+import DayItems from '../../components/day-items/day-items';
 import Discounts from '../../components/discounts/discounts';
 import PopulatItems from '../../components/popular/popular';
 import Promo from '../../components/promo/promo';
@@ -13,6 +14,7 @@ function MainPage (): JSX.Element {
       <PopulatItems/>
       <Sale/>
       <Discounts/>
+      <DayItems/>
       <Articles/>
     </main>
   );

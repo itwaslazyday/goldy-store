@@ -1,0 +1,20 @@
+.dayitems__inner {
+  padding: 60px 0;
+  position: relative;
+}
+
+.dayitems__heading {
+  margin-bottom: 40px;
+  line-height: 80%;
+}
+
+.dayitems__list {
+  margin: 0;
+  padding: 0;
+}
+
+.dayitems__buttons {
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
