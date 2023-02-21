@@ -185,6 +185,11 @@
   font-weight: 500;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.nav__menu-link:hover {
+  opacity: 0.5;
 }
 
 .nav__search-form {
