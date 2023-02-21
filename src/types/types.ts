@@ -24,6 +24,13 @@ type Discount = {
   title: string;
   value: number;
   id: number;
+  tipColor: string;
 };
 
-export type {Item, Article, Discount};
+type Promo = {
+  minorText: string;
+  majorText: string;
+  id: number;
+};
+
+export type {Item, Article, Discount, Promo};

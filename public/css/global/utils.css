@@ -53,14 +53,19 @@
   border: none;
   border-radius: 16px;
   color: var(--color-graphit);
-}
+} */
 
 .button-basic {
   border: none;
-  background-color: var(--color-orange);
+  background-color: var(--color-text-main);
   color: var(--color-white);
-  border-radius: 40px;
-} */
+  font-weight: 500;
+  font-family: inherit;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
 
 @media (min-width: 1300px) {
   .container {

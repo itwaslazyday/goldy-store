@@ -1,0 +1,55 @@
+.discount{
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-grey);
+}
+
+.discount::before {
+  content: '';
+  position: absolute;
+  width: 310px;
+  height: 265px;
+  background: url('../../../public/img/icons/diamond.svg') center no-repeat;
+  top: 25px;
+  left: 0;
+  z-index: 0;
+}
+
+.discount__image {
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.discount__text-wrapper {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  z-index: 2;
+  max-width: 53%;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.discount__title {
+  margin: 0;
+  padding-left: 27px;
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+
+.discount__value {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 24px;
+  padding-left: 26px;
+  max-width: 194px;
+}
+
+.discount__value span {
+  font-size: 36px;
+  vertical-align: middle;
+  padding-left: 10px;
+  line-height: 52px;
+}

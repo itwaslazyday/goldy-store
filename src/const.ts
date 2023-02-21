@@ -1,4 +1,4 @@
-import { Article, Discount, Item } from './types/types';
+import { Article, Discount, Item, Promo } from './types/types';
 
 const cities: string[] = ['Санкт-Петербург', 'Москва', 'Нижний Новгород', 'Ростов-на-Дону'];
 
@@ -184,19 +184,40 @@ const articles: Article[] = [
 const discounts: Discount[] = [
   {
     id: 1,
-    title: 'Скидки на все украшения с бриллиантами',
-    value: 50
+    title: 'Скидки на все украшения с бриллиантами',
+    value: 50,
+    tipColor: '#43807F'
   },
   {
     id: 2,
     title: 'Скидки на кольца и браслеты',
-    value: 40
+    value: 40,
+    tipColor: '#E24B33'
   },
   {
     id: 3,
-    title: 'снижение цен на обручальные кольца',
-    value: 60
+    title: 'Cнижение цен на обручальные кольца',
+    value: 60,
+    tipColor: '#E1A661'
   },
 ];
 
-export {cities, controls, menu, categories, items, articles, discounts};
+const promoAds: Promo[] = [
+  {
+    id: 1,
+    minorText: 'Суперскидка до 60%',
+    majorText: 'на бриллианты'
+  },
+  {
+    id: 2,
+    minorText: 'Суперскидка до 60%',
+    majorText: 'на бриллианты'
+  },
+  {
+    id: 3,
+    minorText: 'Суперскидка до 60%',
+    majorText: 'на бриллианты'
+  },
+];
+
+export {cities, controls, menu, categories, items, articles, discounts, promoAds};

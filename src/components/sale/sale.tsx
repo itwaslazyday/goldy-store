@@ -3,10 +3,10 @@ import { Navigation} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
 import 'swiper/css';
-import { categories, discounts, items } from '../../const';
+import { categories, items } from '../../const';
 import ItemCard from '../item-card/item-card';
 import './sale.css';
-import DiscountItem from '../discount-item/discount-item';
+import SliderButtons from '../slider-buttons/slider-buttons';
 
 function Sale (): JSX.Element {
   const [saleState, setSaleState] = useState<number>(1);
@@ -31,16 +31,7 @@ function Sale (): JSX.Element {
                 ))
               }
             </ul>
-            <button className='sale__btn-prev' aria-label='Предыдущие товары'>
-              <svg width='17' height='8'>
-                <use xlinkHref='img/sprite.svg#slide-prev'/>
-              </svg>
-            </button>
-            <button className='sale__btn-next' aria-label='Следующие товары'>
-              <svg width='17' height='8'>
-                <use xlinkHref='img/sprite.svg#slide-next'/>
-              </svg>
-            </button>
+            <SliderButtons block='sale'/>
           </div>
           <Swiper
             wrapperTag='ul'
@@ -48,9 +39,9 @@ function Sale (): JSX.Element {
             modules={[Navigation]}
             navigation={
               {
-                nextEl: '.sale__btn-next',
-                prevEl: '.sale__btn-prev',
-                disabledClass: 'sale__btn-disabled'
+                nextEl: '.sl__btn-next',
+                prevEl: '.sl__btn-prev',
+                disabledClass: 'sl__btn-disabled'
               }
             }
             slidesPerView={4}
@@ -79,18 +70,6 @@ function Sale (): JSX.Element {
                 К сожалению, товары из выбранной категории пока не участвуют в распродаже.
               </p>}
           </Swiper>
-          <ul className='sale__discounts-list list-reset'>
-            {
-              discounts.map((discount) => (
-                <li
-                  className='sale__discounts-item'
-                  key={discount.id}
-                >
-                  <DiscountItem discount={discount}/>
-                </li>
-              ))
-            }
-          </ul>
         </div>
       </div>
     </section>

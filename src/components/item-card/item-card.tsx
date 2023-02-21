@@ -23,7 +23,7 @@ function ItemCard ({item, category}: itemProps): JSX.Element {
   );
 
   return (
-    <article className='card'>
+    <article className={`card ${cardState.isOpened ? 'card--opened' : ''}`}>
       <ul className='card__tip-list list-reset'>
         <li className={`card__tip card__tip--sale ${item.isSale ? '' : 'card__tip-hidden'}`}>Sale</li>
         <li className={`card__tip card__tip--hit ${item.isHit ? '' : 'card__tip-hidden'}`}>Хит</li>

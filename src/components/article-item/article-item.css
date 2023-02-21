@@ -1,3 +1,7 @@
+.article {
+  max-width: 310px;
+}
+
 .article__image {
   object-fit: cover;
   margin-bottom: 20px;

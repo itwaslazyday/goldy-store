@@ -1,0 +1,10 @@
+.discounts__inner {
+  padding: 60px 0;
+}
+
+.discounts__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
