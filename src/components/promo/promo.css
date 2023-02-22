@@ -34,11 +34,11 @@
 .promo__list-item::before {
   content: '';
   position: absolute;
-  width: 721px;
-  height: 536px;
+  width: 831px;
+  height: 643px;
   background: url('../../../public/img/icons/union.svg') center no-repeat;
-  top: 24px;
-  left: 70px;
+  top: 26px;
+  left: -112px;
   z-index: -1;
 }
 
@@ -48,6 +48,7 @@
   font-family: 'Prata';
   font-size: 20px;
   line-height: 100%;
+  z-index: 2;
 }
 
 .promo__major-text {
@@ -56,6 +57,7 @@
   font-size: 50px;
   line-height: 100%;
   margin-bottom: 54px;
+  z-index: 2;
 }
 
 .promo__details {

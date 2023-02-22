@@ -11,10 +11,11 @@
   padding-right: 40px;
   position: relative;
   transition: all 0.2s linear;
+  line-height: 47%;
 }
 
 .articles__heading {
-  line-height: 51%;
+  line-height: 57%;
 }
 
 .articles__all-link::after {

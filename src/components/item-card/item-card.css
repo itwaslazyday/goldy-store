@@ -6,15 +6,12 @@
   position: relative;
 }
 
-.card--opened {
-  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.1);
-}
-
 .card__tip-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  column-gap: 4px;
+  gap: 4px;
   min-height: 22px;
 }
 
@@ -25,6 +22,7 @@
   font-weight: 500;
   background-color: var(--color-bg-sale);
   border-radius: 15px;
+  max-width: 85%;
 }
 
 .card__tip--hit {
@@ -181,7 +179,7 @@
 
 .card__select {
   min-height: 40px;
-  padding-left: 16px;
+  padding: 0 16px;
   font-size: inherit;
   line-height: inherit;
   border: none;

@@ -1,0 +1,29 @@
+.countdown {
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background: #F5F5F5;
+  padding: 12px 14px;
+  max-width: max-content;
+  text-align: center;
+}
+
+.countdown__field {
+  margin: 0;
+  background: var(--color-white);
+  border: 1px solid #D0D0D0;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 100%;
+  padding: 5px;
+  min-width: 52px;
+}
+
+.countdown__value {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}

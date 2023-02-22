@@ -87,8 +87,8 @@ function ItemCard ({item, category}: itemProps): JSX.Element {
       </Swiper>
       <div className='card__prices-wrapper'>
         <p className='card__prices'>
-          <span className='card__new-price'>{`${item.newPrice} ₽`}</span>
-          <span className={`card__old-price ${item.oldPrice ? '' : 'card__old-price--hidden'}`}>{`${item.oldPrice ?? ''} ₽`}</span>
+          <span className='card__new-price'>{`${item.newPrice.toLocaleString('ru')} ₽`}</span>
+          <span className={`card__old-price ${item.oldPrice ? '' : 'card__old-price--hidden'}`}>{`${item.oldPrice?.toLocaleString('ru') ?? ''} ₽`}</span>
         </p>
         <span className={`card__price-diff ${item.isSale ? '' : 'card__diff--hidden'}`}>{`${item.oldPrice ? getPriceDiff(item.newPrice, item.oldPrice) : ''}%`}</span>
       </div>

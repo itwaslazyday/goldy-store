@@ -16,23 +16,21 @@ function Sale (): JSX.Element {
       <div className='container'>
         <div className='sale__inner'>
           <h2 className='sale__heading secondary-heading'>Распродажа</h2>
-          <div className='sale__wrapper'>
-            <ul className='sale__category-list list-reset'>
-              {
-                categories.filter((item) => item.isSale).map((item) => (
-                  <button
-                    className={`sale__category-tab sale__category-tab--${saleState === item.id ? 'active' : ''}`}
-                    key={item.id}
-                    id={`${item.id}`}
-                    onClick={(evt) => setSaleState(+evt.currentTarget.id ?? 1)}
-                  >
-                    {item.title}
-                  </button>
-                ))
-              }
-            </ul>
-            <SliderButtons block='sale'/>
-          </div>
+          <ul className='sale__category-list list-reset'>
+            {
+              categories.filter((item) => item.isSale).map((item) => (
+                <button
+                  className={`sale__category-tab sale__category-tab--${saleState === item.id ? 'active' : ''}`}
+                  key={item.id}
+                  id={`${item.id}`}
+                  onClick={(evt) => setSaleState(+evt.currentTarget.id ?? 1)}
+                >
+                  {item.title}
+                </button>
+              ))
+            }
+          </ul>
+          <SliderButtons block='sale'/>
           <Swiper
             wrapperTag='ul'
             wrapperClass='sale__item-list'

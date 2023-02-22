@@ -1,15 +1,10 @@
 .sale__inner {
   padding: 60px 0;
-}
-
-.sale__wrapper {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  position: relative;
 }
 
 .sale__heading {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .sale__category-list {
@@ -17,7 +12,8 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 8px;
+  gap: 8px;
+  margin-bottom: 36px;
 }
 
 .sale__category-tab {
@@ -46,7 +42,10 @@
 }
 
 .sale__buttons {
-  margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 109px;
+  z-index: 2;
 }
 
 .sale__item-list {

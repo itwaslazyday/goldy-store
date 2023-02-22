@@ -137,10 +137,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  gap: 28px;
+  gap: 20px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--color-grey);
   margin-bottom: 32px;
+  position: relative;
 }
 
 .dayitem__prices {
@@ -172,6 +173,12 @@
   color: var(--color-white);
   background-color: #E24B33;
   border-radius: 15px;
+}
+
+.dayitem__countdown {
+  position: absolute;
+  top: -30px;
+  left: 43%;
 }
 
 .dayitem__color-wrapper {
@@ -213,37 +220,19 @@
 }
 
 .dayitem__color-wrapper span,
-.dayitem__info span {
+.dayitem__info {
   text-transform: uppercase;
 }
 
 .dayitem__info {
   margin: 0;
+  position: relative;
 }
 
 .dayitem__info span:first-child {
   font-weight: 600;
   font-size: 12px;
   line-height: 100%;
-}
-
-.dayitem__help {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  width: 18px;
-  height: 18px;
-  background-color: var(--color-grey);
-  margin-left: 8px;
-  border-radius: 50%;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-
-.dayitem__help:hover {
-  background-color: #D3D3D3;
 }
 
 .dayitem__sizes {
@@ -263,6 +252,7 @@
   text-align: center;
   cursor: pointer;
   background-color: transparent;
+  transition: all 0.2s linear;
 }
 
 .dayitem__size:hover {

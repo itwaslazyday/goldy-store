@@ -5,7 +5,9 @@ import 'swiper/css';
 import './day-item.css';
 import { Item } from '../../types/types';
 import { useState } from 'react';
-import { itemColors } from '../../const';
+import { itemColors, noteText } from '../../const';
+import HelpNote from '../help-note/help-note';
+import CountDown from '../countdown/countdown';
 
 type itemProps = {
   item: Item;
@@ -86,10 +88,11 @@ function DayItem ({item, category}: itemProps): JSX.Element {
         <span className='dayitem__vendor-code'>Артикул: {item.vendorCode}</span>
         <div className='dayitem__prices-wrapper'>
           <p className='dayitem__prices'>
-            <span className='dayitem__new-price'>{`${item.newPrice} ₽`}</span>
-            <span className={`dayitem__old-price ${item.oldPrice ? '' : 'dayitem__old-price--hidden'}`}>{`${item.oldPrice ?? ''} ₽`}</span>
+            <span className='dayitem__new-price'>{`${item.newPrice.toLocaleString('ru')} ₽`}</span>
+            <span className={`dayitem__old-price ${item.oldPrice ? '' : 'dayitem__old-price--hidden'}`}>{`${item.oldPrice?.toLocaleString('ru') ?? ''} ₽`}</span>
           </p>
           <span className={`dayitem__price-diff ${item.isSale ? '' : 'dayitem__diff--hidden'}`}>{`${item.oldPrice ? getPriceDiff(item.newPrice, item.oldPrice) : ''}%`}</span>
+          <CountDown block='dayitem'/>
         </div>
         <div className='dayitem__color-wrapper'>
           <span>Цвет</span>
@@ -104,7 +107,7 @@ function DayItem ({item, category}: itemProps): JSX.Element {
         <div className='dayitem__sizes-wrapper'>
           <p className='dayitem__info'>
             <span>Размер</span>
-            <span className='dayitem__help'>?</span>
+            <HelpNote block='dayitem' noteText={noteText}/>
           </p>
           <p className='dayitem__sizes'>
             {

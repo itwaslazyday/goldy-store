@@ -275,4 +275,6 @@ const promoAds: Promo[] = [
   },
 ];
 
-export {cities, controls, menu, categories, items, articles, discounts, promoAds, itemColors};
+const noteText = 'Также как существующая теория напрямую зависит от экономической целесообразности принимаемых решений.';
+
+export {cities, controls, menu, categories, items, articles, discounts, promoAds, itemColors, noteText};
