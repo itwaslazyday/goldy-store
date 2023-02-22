@@ -204,7 +204,7 @@ const items: Item[] = [
     images: ['620-1', '620-2', '620-3'],
     isFavorite: false,
     isCompared: false,
-    isSale: true,
+    isSale: false,
     isNew: true,
     isHit: true,
     newPrice: 19000,

@@ -112,7 +112,7 @@ function DayItem ({item, category}: itemProps): JSX.Element {
           <p className='dayitem__sizes'>
             {
               item.sizes?.map((el) => (
-                <button key={el} className='dayitem__size' type='button'>{el}</button>
+                <button key={el} className='dayitem__size' type='button'>{el.toLocaleString('ru')}</button>
               ))
             }
           </p>

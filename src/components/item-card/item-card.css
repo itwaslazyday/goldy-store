@@ -189,3 +189,7 @@
   color: var(--color-text-main);
 }
 
+.card__select--hidden {
+  display: none;
+}
+

@@ -110,12 +110,12 @@ function ItemCard ({item, category}: itemProps): JSX.Element {
           )}
         </select>
         <select
-          className='card__select card__select--size'
+          className={`card__select card__select--size ${item.categoryId !== 1 ? 'card__select--hidden' : ''}`}
           name='size'
           id='size'
         >
           {item.sizes?.map((size) => (
-            <option value={size} key={size}>{`Размер: ${size}`}</option>)
+            <option value={size} key={size}>{`Размер: ${size.toLocaleString('ru')}`}</option>)
           )}
         </select>
       </div>
